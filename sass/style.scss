@@ -1,0 +1,31 @@
+//Override bootstrap and font-awesome fonts path
+
+// @ifdef DEV
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$fa-font-path: "../bower_components/font-awesome/fonts/";
+// @endif
+// @ifdef PROD
+$icon-font-path: "../fonts/bootstrap/";
+$fa-font-path: "../fonts/font-awesome/";
+// @endif
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/font-awesome/scss/font-awesome";
+
+@import "global/settings";
+@import "global/variables";
+@import "global/base";
+@import "global/mixins";
+@import "layout/default";
+@import "module/header";
+@import "module/form";
+@import "module/list";
+@import "module/report";
+@import "module/btn";
+@import "module/contactus";
+@import "component/modal";
+@import "component/portfolio";
+@import "component/product";
+@import "component/fileset";
+@import "admin/qrious.admin";
+@import "directive/limit-lenght-message";

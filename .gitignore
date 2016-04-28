@@ -1,0 +1,13 @@
+.idea/
+bower_components/
+node_modules/
+build/
+.sass-cache/
+.DS_Store
+stylesheets/
+*.jar
+*.iml
+sass/style.processed.scss
+test/build
+test/report
+npm-debug.log

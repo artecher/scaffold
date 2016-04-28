@@ -1,0 +1,19 @@
+{
+  "name": "qrious-portal-frontend",
+  "version": "1.0.0",
+  "author": "ethan.lee@sparkventures.co.nz",
+  "dependencies": {
+    "angular": "1.5.0",
+    "angular-animate": "1.5.0",
+    "angular-bootstrap": "1.1.2",
+    "angular-mocks": "1.5.0",
+    "angular-ui-router": "0.2.15",
+    "bootstrap-sass": "3.3.6",
+    "font-awesome": "4.3.0",
+    "jquery": "2.2.3",
+    "lodash": "3.10.1"
+  },
+  "resolutions": {
+    "angular": "1.5.0"
+  }
+}
