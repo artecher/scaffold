@@ -1,6 +1,6 @@
 'use strict';
 
-const buildFolderUrl = 'build/templates';
+const buildFolderUrl = 'build';
 
 module.exports = {
   fontsUrl: 'fonts',
@@ -10,6 +10,8 @@ module.exports = {
     esSrcGlob: 'script/**/*.es6',
     buildDestPath: `${buildFolderUrl}/script/`,
     buildDestGlob: `${buildFolderUrl}/script/*`,
+    buildDestJsGlob: `${buildFolderUrl}/script/**/*.js`,
+    appJs: `${buildFolderUrl}/script/app.js`,
     testSrcGlob: 'test/**/*.es6',
     testDestPath: 'test/build',
     testDestGlob: `test/build/**/*.js`
@@ -20,16 +22,18 @@ module.exports = {
     rawFile: 'sass/style.scss',
     srcFilePath: 'sass/',
     srcGlob: 'sass/**',
+    srcGlob1: 'script/**',
     destPath: 'stylesheets',
     destGlob: 'stylesheets/*',
     errorDestPath: `${buildFolderUrl}/style`
   },
   html: {
-    index: 'dashboard.html',
+    index: 'index.html',
+    preInjectionHtml: 'html/index.html',
+    indexFolder: '.',
     viewGlob: 'views/**',
     viewDestPath: `${buildFolderUrl}/views`,
     viewDestGlob: `${buildFolderUrl}/views/*`,
-    errorDestPath: `${buildFolderUrl}/`, //TODO: remove this later
     templateSrcGlob: 'script/**/*.html',
     templateDestPath: `${buildFolderUrl}/script/`,
     templateDestGlob: `${buildFolderUrl}/script/**/*.html`
@@ -58,5 +62,11 @@ module.exports = {
   },
   karma: {
     configPath: '/karma.conf.js'
+  },
+  krpano: {
+    srcGlob: 'krpano/**',
+    destPath: `${buildFolderUrl}/krpano/`,
+    destGlob: `${buildFolderUrl}/krpano/*`
+
   }
 };

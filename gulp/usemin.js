@@ -5,7 +5,7 @@ let $ = require('./plugins.js');
 
 
 //todo: depend on sass
-gulp.task('usemin', ['sass:prod', 'script:prod'], () => {
+gulp.task('usemin', ['sass:prod'], () => {
   return gulp.src('index.html')
     .pipe($.usemin({
       js: [$.uglify(), $.rev()],

@@ -5,11 +5,15 @@ let yargs = require('yargs').argv;
 module.exports = {
   args :{
     isLocal: yargs.local,
-    isApiary: yargs.apiary,
     baseUrl: yargs.baseUrl,
-    version: yargs.version,
-    repo: yargs.repo
+    isNode: yargs.node,
+    isHybrid: yargs.hybrid,
+    delay: yargs.delay // delay for express api
   },
   argv: yargs,
-  port: 8080
+  nodeApis: [
+    {method: 'ALL', pathPrefix: '/api/v1/admin/user'},
+    {method: 'ALL', pathPrefix: '/api/v1/admin/product/user'},
+    {method: 'POST', pathPrefix: '/api/v1/admin/user/authorisation'}
+  ]
 };

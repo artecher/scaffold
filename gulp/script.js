@@ -29,7 +29,7 @@ gulp.task('script:dev', ['preprocess:js:dev', 'preprocess:es:dev'], () => {
 gulp.task('script:prod', ['preprocess:js:prod', 'preprocess:es:prod'], () => {
 });
 
-gulp.task('script:dev:reload', ['preprocess:js:changed', 'preprocess:es:changed'], () => {
+gulp.task('script:dev:reload', ['preprocess:js:changed', 'preprocess:es:changed', 'sass:dev'], () => {
   return $.browserSync.reload();
 });
 

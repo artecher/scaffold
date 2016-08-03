@@ -2,6 +2,6 @@
 
 let gulp = require('gulp');
 
-gulp.task('build:prod', ['usemin', 'favicon']);
+gulp.task('deploy', ['image', 'usemin', 'template', 'view', 'favicon', 'font']);
 
-gulp.task('build:dev', ['image', 'sass:dev', 'script:dev']);
+gulp.task('build', ['image', 'sass:dev', 'template', 'view', 'font']);

@@ -5,7 +5,7 @@ let $ = require('./plugins');
 let globAll = require('glob-all');
 
 gulp.task('watch:sass', () => {
-  gulp.watch(globAll.sync([$.paths.css.srcGlob, `!${$.paths.css.srcFile}`]), ['sass:dev']);
+  gulp.watch(globAll.sync([$.paths.css.srcGlob, $.paths.css.srcGlob1, `!${$.paths.css.srcFile}`]), ['sass:dev']);
 });
 
 // compile all files before watching only changed files

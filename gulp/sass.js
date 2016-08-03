@@ -9,7 +9,7 @@ let config = {
 };
 
 gulp.task('sass:dev', ['sass:preprocess:dev', 'clean:css'], () => {
-  return $.rubySass($.paths.css.srcFile)
+  return $.rubySass([$.paths.css.srcFile, 'sass/custom.scss'])
     .pipe($.plumber())
     .pipe($.autoprefixer(
         {
@@ -22,7 +22,7 @@ gulp.task('sass:dev', ['sass:preprocess:dev', 'clean:css'], () => {
 });
 
 gulp.task('sass:prod', ['sass:preprocess:prod', 'clean:css'], () => {
-  return $.rubySass($.paths.css.srcFile)
+  return $.rubySass([$.paths.css.srcFile, 'sass/custom.scss'])
     .pipe($.autoprefixer(
       {
         browsers: ['last 5 versions', 'Firefox ESR', 'Opera 12.1', 'IE >= 10', 'Android 2.3']

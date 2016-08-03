@@ -23,6 +23,10 @@ gulp.task('clean:template', () => {
   return $.del($.paths.html.templateDestGlob);
 });
 
+gulp.task('clean:view', () => {
+  return $.del($.paths.html.viewDestGlob);
+});
+
 gulp.task('clean:font', () => {
   return $.del($.paths.font.destGlob);
 });
@@ -30,4 +34,12 @@ gulp.task('clean:font', () => {
 gulp.task('clean:image', () => {
   return $.del($.paths.image.destGlob);
 });
+
+gulp.task('clean:index', () => {
+  return $.del($.paths.html.index);
+});
+
+gulp.task('clean:krpano', () => {
+  return $.del($.paths.krpano.destGlob);
+})
 
